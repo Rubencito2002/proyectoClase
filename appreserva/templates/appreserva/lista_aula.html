@@ -1,0 +1,11 @@
+{% extends 'appreserva/base.html' %}
+{% block content %}
+    <h1>Lista de Aulas Disponibles</h1>
+    <ul>
+        {% for aula in aulas %}
+            <a href="{% url 'detail_aula' pk=aula.pk %}" role="button"><li>{{ aula.nombre }} - Capacidad: {{ aula.capacidad }}</li></a>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'reserva_aula' %}" role="button">Reservar Aula</a>
+    <a href="{% url 'crear_aula' %}" role="button">Crear Aula</a>
+{% endblock %}

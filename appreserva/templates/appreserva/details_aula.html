@@ -1,0 +1,9 @@
+{% extends 'appreserva/base.html' %}
+{% block content %}
+    <h1>Detalles del Aula</h1>
+    <ul>
+        <li>{{ aula.nombre }} - Capacidad: {{ aula.capacidad }}</li>
+    </ul>
+    <a href="{% url 'edit_aula' pk=aula.pk %}" role="button">Editar</a>
+    <a href="{% url 'delete_aula' pk=aula.pk %}" role="button">Eliminar</a>
+{% endblock %}
