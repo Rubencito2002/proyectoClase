@@ -24,7 +24,8 @@ class detail_aula(DetailView):
     template_name = 'appreserva/details_aula.html'
 
 class edit_aula(UpdateView):
-    model = Aula
+    model = ReservaAula
+    fields = ['aula', 'fecha_inicio', 'fecha_fin', 'hora_inicio', 'hora_fin', 'nombre_reservante', 'email_reservante']
     template_name = 'appreserva/edit_aula.html'
     success_url = reverse_lazy('lista_aulas')
 

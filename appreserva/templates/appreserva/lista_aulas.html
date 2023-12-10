@@ -2,7 +2,7 @@
 {% block content %}
     <h1>Lista de Aulas Disponibles</h1>
     <ul>
-        {% for aula in aulas %}
+        {% for aula in object_list %}
             <a href="{% url 'detail_aula' pk=aula.pk %}" role="button"><li>{{ aula.nombre }} - Capacidad: {{ aula.capacidad }}</li></a>
         {% endfor %}
     </ul>
